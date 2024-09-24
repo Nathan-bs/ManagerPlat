@@ -6,7 +6,7 @@ import mysql.connector
 conexao = mysql.connector.connect(
     host='localhost',
     user='root',
-    password='#Na18th12an04',
+    password='',
     database='virtualtech',
 )
 
@@ -15,7 +15,7 @@ cursor = conexao.cursor()
 app = Flask(__name__)
 
 # Configuração do SQLAlchemy, codificando o caractere especial na senha
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:%23Na18th12an04@localhost/virtualtech'
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Desativar notificações de alterações
 
 db = SQLAlchemy(app)
